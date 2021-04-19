@@ -1,0 +1,137 @@
+<html>
+    <head> 
+        <title>Ninjaman</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                line-height: 0;
+            }
+            .wall {
+                background-color: blue;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            .sushi {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/sushi.png');
+                background-size: contain;
+            } 
+            .onigiri {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/onigiri.png');
+                background-size: contain;
+            }
+            .blank {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            #ninjaman {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/ninja.gif');
+                background-size: contain;
+                position: absolute;
+                left:40px;
+                top:40px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div id = 'world'></div>
+        <div id = 'ninjaman'></div>
+        
+    </body>
+    <script type="text/javascript">
+    var scoreCount = 0;
+    
+        var world = [
+            [1,1,1,1,1],
+            [1,0,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),Math.floor(Math.random() * 4),1],
+            [1,1,1,1,1],
+        ];
+        var worldDict = {
+            0: 'blank', 
+            1: 'wall', 
+            2: 'sushi',
+            3: 'onigiri'
+        }
+
+        function drawWorld(){
+            output = "";
+            for (var row = 0; row < world.length; row++){
+                output += "<div class = 'row'>"
+                    for (var x = 0; x < world[row].length; x++){
+                        output += "<div class = '" + worldDict[world[row][x]] +"'></div>"
+                    }
+                    output += "</div>"
+            }
+            output += "<h1 style='padding-top:50px'>Score: " + scoreCount + "</h1>"
+            document.getElementById('world').innerHTML = output;
+        }
+        drawWorld();
+            
+        var ninjaman = {
+            x: 1,
+            y: 1
+        }
+
+    
+
+        function drawNinjaman(){
+            document.getElementById('ninjaman').style.top = ninjaman.y * 40 + 'px'
+            document.getElementById('ninjaman').style.left = ninjaman.x * 40 + 'px'
+        }
+            drawNinjaman();
+
+            document.onkeydown = function(e){
+                if(e.keyCode == 37 && world[ninjaman.y][ninjaman.x - 1] != 1){
+                    ninjaman.x--;
+                }
+                if(e.keyCode == 39 && world[ninjaman.y][ninjaman.x + 1] != 1){
+                    ninjaman.x++;
+                }
+                if(e.keyCode == 38 && world[ninjaman.y - 1][ninjaman.x] != 1){
+                    ninjaman.y--;
+                }
+                if(e.keyCode == 40 && world[ninjaman.y + 1][ninjaman.x] != 1){
+                    ninjaman.y++;
+                }
+                 if (world[ninjaman.y][ninjaman.x] == 2){
+                scoreCount++;
+                }
+                if (world[ninjaman.y][ninjaman.x] == 3){
+                scoreCount= scoreCount+5;
+                }
+                world[ninjaman.y][ninjaman.x] = 0;
+                drawNinjaman();
+                drawWorld();
+                
+            }
+
+
+        </script>
+</html>

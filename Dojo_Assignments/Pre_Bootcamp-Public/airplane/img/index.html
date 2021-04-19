@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///Users/ianrogers/Pre_Bootcamp-Public/airplane/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+    #ocean {
+        background-image: url("img/Space_Background.gif");
+        width:900px;
+        height:700px;
+        
+    }
+    .player {
+        position: absolute;
+        background-image: url("img/PNGIX.com_fighter-png_2570191.png");
+        max-width:100%;
+        max-height: 100%;
+        width:70px;        
+        height:75px;
+        
+        
+    }
+    .enemy {
+        position: absolute;
+        background-image: url("img/enemy.png");
+        width:70px;
+        height:75px;
+    }
+    .missle {
+        position: absolute;
+        background-image: url("img/missile.png");
+        width:10px;
+        height:38px;
+    }
+	</style>
+
+    <div id="ocean">
+        <div id="players"><div class="player" style="left:470px; top:620px"></div></div>
+        <div id="enemies"><div class="enemy" style="left:350px; top:675px"></div><div class="enemy" style="left:425px; top:725px"></div><div class="enemy" style="left:500px; top:775px"></div><div class="enemy" style="left:575px; top:825px"></div></div>
+        <div id="missile"></div>
+    </div>
+
+
+    <!-- #################################################### -->
+    <!-- From here on is the Javascript that runs the program -->
+    <!-- #################################################### -->
+	<script type="text/javascript">
+
+    var player = {
+        left: 450,
+        top: 620
+    }
+
+	var enemies = [
+        {left:350, top:200},
+        {left:425, top:250},
+        {left:500, top:300},
+        {left:575, top:350} 
+    ]
+
+    var missile = [
+
+    ]
+
+    function drawPlayer() {
+         content = "<div class='player' style='left:"+ player.left +"px; top:"+ player.top +"px'></div>";
+         document.getElementById("players").innerHTML = content;
+    }
+
+    function drawEnemies() {
+         content = "";
+        for(var idx = 0; idx<enemies.length; idx++){
+            content += "<div class='enemy' style='left:"+ enemies[idx].left +"px; top:"+ enemies[idx].top +"px'></div>";
+         }
+         document.getElementById("enemies").innerHTML = content;
+    }
+
+    function moveEnemies() {
+        for(var idx=0; idx<enemies.length; idx++){
+            enemies[idx].top = enemies[idx].top + 5;
+        }
+    }
+
+    function drawMissile() {
+        content = "";
+        for(var idx=0; idx<missile.length; idx++){
+            conent += "<div class='missile' style='left:"+ missile[idx].left+"; top:" +missile[idx].top+ "px'></div>"
+        }
+        document.getElementById("missile").innerHTML = content;
+
+    }
+
+    function moveMissile() {
+
+    }
+
+    document.onkeydown = function(e) {
+        if(e.keyCode == 37){
+             player.left = player.left - 10;
+        }
+        if(e.keyCode == 39){
+             player.left = player.left + 10;
+        }
+        if(e.keyCode == 38 && player.top>400){
+             player.top = player.top - 10;
+        }
+        if(e.keyCode == 40 && player.top<630){
+             player.top = player.top + 10;
+        }
+        if(e.keyCode == 32){ //fire missile
+            missile.push({left: (player.left+34), top: (player.top-8)})
+        }
+        drawPlayer();
+    }
+
+
+    
+    function gameLoop(){
+        drawPlayer();
+        moveEnemies();
+        drawEnemies();
+       setTimeout(gameLoop, 250)
+    }
+    gameLoop();
+	</script>
+
+</body></html>

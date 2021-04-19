@@ -1,0 +1,29 @@
+h1 {
+    background-color: black;
+}
+
+h2 {
+    background-color: purple;
+}
+
+h3 {
+    background-color: skyblue;
+}
+
+#white_color {
+    color: white;
+}
+
+#cyan_color {
+    color: cyan;
+}
+
+.centered {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right {
+    text-align: right;
+    text-decoration: underline;
+}
