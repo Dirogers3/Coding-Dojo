@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
 }
 
 
@@ -56,11 +57,13 @@ img {
 
 .main_container {
     display: flex;
+    
 }
 .main_col {
     /* display: flex; */
     justify-content: center;
-    flex:1;
+    margin:0px;
+    flex:2;
 }
 
 .right_col {
@@ -174,4 +177,12 @@ h3 {
     width: 750px;
     margin-top:25px;
     border-radius: 8px;
+}
+
+.education_content {
+    margin: 10px;
+}
+
+.education_header h3 {
+    margin: 20px;
 }
