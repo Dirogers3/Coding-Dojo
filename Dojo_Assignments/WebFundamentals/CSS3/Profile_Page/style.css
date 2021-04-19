@@ -168,3 +168,10 @@ h3 {
 .iconusername > p {
     align-items: center;
 }
+
+.education_container {
+    box-shadow: 2px 2px black;
+    width: 750px;
+    margin-top:25px;
+    border-radius: 8px;
+}
