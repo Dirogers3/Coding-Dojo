@@ -54,9 +54,18 @@ img {
     height: auto;
 }
 
-.main {
+.main_container {
     display: flex;
+}
+.main_col {
+    /* display: flex; */
     justify-content: center;
+    flex:1;
+}
+
+.right_col {
+    display: flex;
+    flex:1
 }
 
 .container {
@@ -65,6 +74,18 @@ img {
     width: 750px;
     margin-top:25px;
     border-radius: 8px;
+}
+
+.container_headers {
+    color: White;
+    background-color: black;
+    margin:0;
+    display: flex;
+}
+
+.education_container, .requests_container, .connections_container {
+    border: 3px solid gray;
+    margin:0px;
 }
 
 .header {
@@ -110,4 +131,40 @@ p {
 
 a {
     margin-left: 10px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.user_requests {
+    display: flex;
+    justify-content:space-between;
+}
+
+.iconusername {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#notification_count {
+    background-color: gray;
+    border-radius: 10px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#accept_decline_icon {
+    width:16px;
+    height: 16px;
+}
+
+#other_user_icon {
+    width:24px;
+    height: 24px;
+}
+
+.iconusername > p {
+    align-items: center;
 }
