@@ -2,6 +2,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    outline: 1px solid red;
 }
 
 
@@ -57,25 +58,22 @@ img {
 
 .main_container {
     display: flex;
-    
+    padding: 20px;
+    justify-content: center;
 }
 .main_col {
-    /* display: flex; */
-    justify-content: center;
     margin:0px;
-    flex:2;
+    margin-right:20px;
 }
 
 .right_col {
     display: flex;
-    flex:1
 }
 
 .container {
     border: 3px solid gray;
     box-shadow: 2px 2px black;
     width: 750px;
-    margin-top:25px;
     border-radius: 8px;
 }
 
@@ -185,4 +183,12 @@ h3 {
 
 .education_header h3 {
     margin: 20px;
+}
+
+.connections_container{
+    margin-top: 15px;
+}
+
+.main_col {
+    outline :1px solid blue;
 }
