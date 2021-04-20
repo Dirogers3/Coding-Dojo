@@ -2,6 +2,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    /* outline: 1px solid red; */
 }
 
 
@@ -30,9 +31,10 @@ body {
 
 }
 
-a {
+li a {
     color:white;
     text-decoration:none;
+    margin-left: 10px;
 }
 
 li {
@@ -85,7 +87,8 @@ img {
 
 .education_container, .requests_container, .connections_container {
     border: 3px solid gray;
-    margin:0px;
+    margin:5px;
+    border-radius: 8px;
 }
 
 .header {
@@ -129,8 +132,8 @@ p {
     margin-top:0px;
 }
 
-a {
-    margin-left: 10px;
+.info h1 {
+    padding-top: 15px;
 }
 
 h3 {
@@ -146,6 +149,7 @@ h3 {
     display: flex;
     align-items: center;
     vertical-align: middle;
+    margin-left: 15px;
 }
 
 #notification_count {
@@ -167,6 +171,7 @@ h3 {
 
 .iconusername > p {
     align-items: center;
+    margin: 5px;
 }
 
 .education_container {
@@ -182,8 +187,40 @@ h3 {
 
 .education_header h3 {
     margin: 20px;
+    padding: 7px;
+}
+
+.container_headers {
+    padding: 5px;
+    
+}
+
+.container_headers h3 {
+    margin-left: 15px;
 }
 
 .connections_container{
     margin-top: 15px;
+}
+
+#connections_viewmore {
+    margin: 10px;
+    color:black;
+    border-top: 3px solid gray;
+    padding: 10px;
+}
+
+a#connection_viewmore {
+    margin: 30px;
+}
+
+.accept_decline_icons {
+    display:flex;
+    align-items:center;
+    margin-right: 15px;
+
+}
+
+.viewmore {
+    border-top: 3px solid gray;
 }
