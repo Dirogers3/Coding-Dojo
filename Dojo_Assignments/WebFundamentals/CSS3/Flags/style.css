@@ -80,3 +80,26 @@
     grid-column: 1/13;
     grid-row:13;
 }
+
+.blue {
+    background-color: blue;
+    height: 376.6px;
+    width: 600px;
+    position:absolute;
+}
+
+.star {
+    color: white;
+    font-size: 45px;
+
+}
+
+.star_row1 {
+    display: flex;
+    justify-content:space-around;
+}
+
+.star_row2 {
+    display: flex;
+    justify-content:space-evenly;
+}
