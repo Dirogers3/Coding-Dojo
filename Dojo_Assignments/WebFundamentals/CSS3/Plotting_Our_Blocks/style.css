@@ -1,3 +1,7 @@
+* {
+    outline: 1px solid red;
+}
+
 .container{
     width: 950px;
     background-color: silver;
@@ -24,7 +28,7 @@
     background-color: red;
     display:inline-block;
     vertical-align:top;
-    
+
 }
 .sub-content {
     height: 200px;
@@ -35,7 +39,8 @@
 }
 #advertisement {
     height: 120px;
-    width: 660px;
+    width: 670px;
     background-color: purple;
-    margin: 15px;
+    margin-left: 15px;
+    
 }
