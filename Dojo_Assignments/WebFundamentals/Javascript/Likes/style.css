@@ -1,12 +1,28 @@
 * {
     font-family: sans-serif;
+    outline: 1px solid red;
+}
+html {
+    
 }
 
 body {
     padding: 0px;
     margin: 0px;
+    display: flex;
+    justify-content: center;
 }
 
+.all-container {
+    width: 620px;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%
+}
 .like_container {
     border: 4px solid black;
     border-radius: 5px;
@@ -14,8 +30,22 @@ body {
     width:370px;
     height: auto;
     margin: auto;
-    margin-top: 30px;
+    margin: 0px 0px 10px 15px;
     padding: 25px;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 5px 0px 5px 25px;
+}
+
+.navbar h1 {
+    margin: 0px;
+}
+
+.title {
+    text-align: center;
 }
 
 .header {
@@ -26,9 +56,11 @@ body {
     padding: 0px;
 }
 
-h1 {
+.header h2 {
     margin-right:40px;
+    flex: 1;
 }
+
 
 .like-button {
     background-color: rgb(211, 184, 30);
@@ -36,10 +68,34 @@ h1 {
     box-shadow: 4px 2px;
     width: 70px;
     height: 40px;
-    margin-left: 15px;
+    margin-left: 5px;
+    margin-right: 0px;
     font-size: 18px;
 }
 
 #count, #count2, #count3 {
     width: 70px;
+}
+
+.leftcol {
+    border: 4px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    padding: 20px 15px 15px 10px;
+}
+
+.usericon {
+    width: 60px;
+}
+
+div .header {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
 }
