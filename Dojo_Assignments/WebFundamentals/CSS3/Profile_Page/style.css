@@ -157,20 +157,20 @@ h3 {
     height:50px;
 }
 
-#notification_count {
+.notification_count {
     background-color: gray;
     border-radius: 10px;
     padding-left:5px;
     padding-right:5px;
 }
 
-#accept_decline_icon {
+.accept_decline_icon {
     width:16px;
     height: 16px;
     margin-left:5px;
 }
 
-#other_user_icon {
+.other_user_icon {
     width:24px;
     height: 24px;
 }
