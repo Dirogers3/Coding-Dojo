@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Indie Flower', cursive;
 }
 
 .navbar {
@@ -15,6 +19,10 @@
 .location-links {
     display:inline-flex;
     list-style: none;
+}
+
+.location-link{
+    background-color:black;
 }
 
 .location-bar {
@@ -41,6 +49,9 @@ a {
     text-decoration: none;
     color: white;
 }
+a:hover {
+    color:gray;
+}
 
 hr {
     color: black;
@@ -63,6 +74,9 @@ h2 {
     border-radius: 50%;
     margin: 10px;
 }
+.days-of-week-weather-icon:hover {
+    width:140px;
+}
 
 .four-day-container {
     display: flex;
@@ -73,6 +87,7 @@ h2 {
 .days-of-week {
     background-color: rgb(228, 228, 228);
     padding: 10px;
+    margin: 0px 10px 0px 10px;
 }
 
 .temp-high-and-low {
@@ -91,13 +106,12 @@ h2 {
     align-items: center;
     background-color: gray;
     border: 2px solid black;
-    width: 560px;
+    width: 620px;
     margin:auto;
     position: absolute;
     bottom:5px;
     left: 0;
     right:0;
-    
 }
 
 .cookie-accept-button {
@@ -106,6 +120,11 @@ h2 {
     box-shadow: 3px 4px;
     height: 30px;
     width: 70px;
+
+}
+
+.cookie-dialog {
+    padding: 3px 15px 3px 15px;
 }
 
 .high {

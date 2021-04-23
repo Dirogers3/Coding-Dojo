@@ -1,14 +1,14 @@
 var elem = document.getElementById("cookie-remove");
 
-var degrees =   {fahrenheit:[   {todayhigh:"75°",   todaylow:"65°"},
-                                {tomorrowhigh:"80°",   tomorrowlow:"66°"},
-                                {fridayhigh:"69°",     fridaylow:"61°"},
-                                {saturdayhigh:"78°",   saturdaylow:"70°"}
+var degrees =   {fahrenheit:[   {todayhigh:"75°F",   todaylow:"65°F"},
+                                {tomorrowhigh:"80°F",   tomorrowlow:"66°F"},
+                                {fridayhigh:"69°F",     fridaylow:"61°F"},
+                                {saturdayhigh:"78°F",   saturdaylow:"70°F"}
                             ],
-                    celsius:[   {todayhigh:"23.9°",    todaylow:"18.3°"},
-                                {tomorrowhigh:"26.7°", tomorrowlow:"18.9°"},
-                                {fridayhigh:"20.6°",   fridaylow:"16.1°"},
-                                {saturdayhigh:"25.6°", saturdaylow:"21.1°"}
+                    celsius:[   {todayhigh:"23.9°C",    todaylow:"18.3°C"},
+                                {tomorrowhigh:"26.7°C", tomorrowlow:"18.9°C"},
+                                {fridayhigh:"20.6°C",   fridaylow:"16.1°C"},
+                                {saturdayhigh:"25.6°C", saturdaylow:"21.1°C"}
                             ]
                 }
 function remove() {
