@@ -37,7 +37,7 @@ console.log(sum);
 
 console.log("Factorial until product is larger than 1e8")
 var product = 1;
-var n = 1;
+var n = 0;
 while(product < 100000000) {
     n++;
     product = product * n;
