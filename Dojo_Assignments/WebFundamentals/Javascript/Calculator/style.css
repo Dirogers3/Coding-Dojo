@@ -4,7 +4,6 @@
     height: 550px;
     padding: 10px;
 }
-
 .display {
     background-color: black;
     width: 375px;
@@ -16,14 +15,11 @@
     text-align: right;
     display: inline-block;
     font-size: 49px;
-    
 }
-
 .row {
     display: flex;
     justify-content: space-evenly;
 }
-
 button {
     background-color:rgb(85, 85, 85);
     color: white;
@@ -32,16 +28,14 @@ button {
     height: 70px;
     border-radius: 50px;
     margin: 10px 3px 10px 3px;
-    border: none;
+    /* border: none; */
 }
-
 #equals {
     background-color: rgb(218, 218, 218);
     color: black;
     width: 100%;
     margin: 15px 10px 15px 10px;
 }
-
 .operator {
     background-color: rgb(251, 142, 0);
 }
