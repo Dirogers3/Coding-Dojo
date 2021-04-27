@@ -49,7 +49,6 @@ function evensOfOdds(arr) {
         return "odds are larger";
     }
 }
-   
 var result = evensOfOdds([6, 8, 3, 10, -2, 5, 9]);
 console.log(result); // we expect back "evens are larger"
 
@@ -102,6 +101,5 @@ function fibonacciArray(n) {
     }
     return fibArr;
 }
-   
 var result = fibonacciArray(10);
 console.log(result); // we expect back [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]

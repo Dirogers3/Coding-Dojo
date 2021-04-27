@@ -9,13 +9,10 @@ function clr() {
     operator = undefined;
     document.getElementById("display").innerHTML = "";
 }
-
 clr();
-
 function setOP(op) {
     operator = op;
 }
-
 function press(number) {
     if(operator == undefined) {
         firstOperand = firstOperand + number;
@@ -26,7 +23,6 @@ function press(number) {
         document.getElementById("display").innerHTML = secondOperand;
     }
 }
-
 function calculate() {
     if(operator == '+'){
         total = parseFloat(firstOperand) + parseFloat(secondOperand);

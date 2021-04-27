@@ -1,6 +1,5 @@
 * {
     font-family: sans-serif;
-    outline: 1px solid red;
 }
 
 h2 {
@@ -21,7 +20,6 @@ body {
 .maincontainer {
     display: flex;
     justify-content: space-between;
-    width: 100%
 }
 .like_container {
     border: 4px solid black;
@@ -46,11 +44,10 @@ body {
 
 .title {
     text-align: center;
-
 }
 
 .header {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: -25px;
@@ -61,7 +58,6 @@ body {
     margin-right:40px;
     flex: 1;
 }
-
 
 .like-button {
     background-color: rgb(211, 184, 30);
@@ -83,7 +79,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 200px;
     padding: 20px 15px 15px 10px;
