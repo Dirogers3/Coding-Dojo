@@ -2,7 +2,6 @@ var firstOperand = "";
 var secondOperand = "";
 var operator = undefined;
 var total = 0;
-
 function clr() {
     firstOperand = "";
     secondOperand = "";
