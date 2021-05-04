@@ -8,6 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-    
+    {% if colora: %}
+        <style>
+            .color0{
+                background-color: {{colora}};
+            }
+            .color1{
+                background-color:{{colorb}};
+            }
+        </style>
+    {% endif %}
+    <div class="container">
+        {% for i in range(y): %}
+            <div class="row">
+                {% for j in range(x): %}
+                    <div class="color{{(i + j) % 2}}"></div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+
 </body>
 </html>
+
+            
+            
