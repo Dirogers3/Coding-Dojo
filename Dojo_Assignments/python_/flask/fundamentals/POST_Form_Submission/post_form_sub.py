@@ -12,7 +12,8 @@ def results():
     form_location = request.form['location']
     form_language = request.form['language']
     form_comment = request.form['comment']
-    return render_template('/result.html', name_on_template = form_name, location_on_template = form_location, language_on_template = form_language, comment_on_template = form_comment )
+    form_gender = request.form['gender']
+    return render_template('/result.html', name_on_template = form_name, location_on_template = form_location, language_on_template = form_language, comment_on_template = form_comment, gender_on_template = form_gender )
 
 
 if __name__=="__main__":
