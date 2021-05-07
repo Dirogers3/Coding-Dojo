@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+        * {
+            text-align: center;
+        }
+        .boxlow {
+            background-color: Red;
+            width:200px;
+            height:200px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box_right {
+            background-color: green;
+            width:200px;
+            height: 200px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .container {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Great Number Game!</h2>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+    <div class="container">
+        {% if (guessNumber > randomNum): %}
+        <div class="boxlow" id="box">
+            <h3>Too High!</h3>
+        <p>{{ template_tries }}/6 tries</p>
+    </div>
+        {% endif%}
+        {% if (guessNumber < randomNum): %}
+        <div class="boxlow" id="box">
+            <h3>Too Low!</h3>
+            <p>{{ template_tries }}/6 tries</p>
+        </div>
+        {% endif%}
+        {% if (guessNumber == randomNum): %}
+        <div class="box_right" id="box">
+            <h3>{{ randomNum }} was the number!</h3>
+            <form action="/">
+                <button>Play again</button>
+            </form>
+        </div>
+        {% endif%}
+    </div>
+    <form action="/guess/" method="POST">
+        <textarea name="guess" id="guess" cols="10" rows="1"></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
