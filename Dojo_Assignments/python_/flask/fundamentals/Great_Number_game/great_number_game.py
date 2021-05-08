@@ -27,6 +27,12 @@ def guess():
     form_tries = session['tries']
     return render_template("results.html", randomNum = int(random_number), guessNumber = int(form_guess), template_tries = int(form_tries))
 
+@app.route('/leader/', methods=['POST'])
+def leaderboard():
+    session['leaderboard']=[]
+    
+
+    return render_template("leaderboard.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

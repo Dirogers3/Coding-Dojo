@@ -16,6 +16,7 @@
             display:flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
         .box_right {
             background-color: green;
@@ -38,21 +39,31 @@
     <p>I am thinking of a number between 1 and 100</p>
     <p>Take a guess!</p>
     <div class="container">
-        {% if (guessNumber > randomNum): %}
+        {% if (guessNumber > randomNum and template_tries < 5): %}
         <div class="boxlow" id="box">
             <h3>Too High!</h3>
-        <p>{{ template_tries }}/6 tries</p>
+        <p>{{ template_tries }}/5 tries</p>
     </div>
         {% endif%}
-        {% if (guessNumber < randomNum): %}
+        {% if (guessNumber < randomNum and template_tries < 5 )  %}
         <div class="boxlow" id="box">
             <h3>Too Low!</h3>
-            <p>{{ template_tries }}/6 tries</p>
+            <p>{{ template_tries }}/5 tries</p>
         </div>
         {% endif%}
         {% if (guessNumber == randomNum): %}
         <div class="box_right" id="box">
             <h3>{{ randomNum }} was the number!</h3>
+            <h2>You got it in {{ template_tries }}/5 Tries</h2>
+            <form action="/">
+                <button>Play again</button>
+            </form>
+        </div>
+        {% endif%}
+        {% if (template_tries == 5 and guessNumber != randomNum): %}
+        <div class="boxlow" id="box">
+            <h3>You Lose! </h3>
+            <h2>Try Again! </h2>
             <form action="/">
                 <button>Play again</button>
             </form>
