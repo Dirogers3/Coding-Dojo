@@ -10,17 +10,21 @@
     <h1>Leaderboards</h1>
     <table>
         <th>
-            <td>Name</td>
-            <td>Number of Tries</td>
+            <tr>
+                <td>Name</td>
+                <td>Number of Tries</td>
+            </tr>
         </th>
-        {% for x in session %}
+        {% for x in session.leaderboard: %}
         <tr>
-            <td>{{ name }}</td>
-            <td>{{ tries }}</td>
+            <td>{{ session.leaderboard }}</td>
+            <td>{{ session.leaderboard.tries }}</td>
+            <!-- <td>{{ session.leaderboard.name }}</td>
+            <td>{{ session.leaderboard.tries }}</td> -->
         </tr>
         {% endfor %}
-
     </table>
-    <div class="table"></div>
+    <a href="/"><button>Play Again</button></a>
+
 </body>
 </html>

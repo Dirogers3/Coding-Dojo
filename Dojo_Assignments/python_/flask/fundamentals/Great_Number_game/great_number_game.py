@@ -34,9 +34,10 @@ def guess():
 
 @app.route('/leader/', methods=['POST'])
 def leaderboard():
-    
-    print(session['name'])
-    
+    if 'leaderboard' not in session:
+        session['leaderboard'] = []
+    session['name'] = request.form["name"]
+    session['leaderboard'].append([session['name'],session['tries']])
     return render_template("leaderboard.html")
 
 if __name__ == "__main__":
