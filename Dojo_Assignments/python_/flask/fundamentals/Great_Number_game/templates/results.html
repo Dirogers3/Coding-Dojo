@@ -55,8 +55,9 @@
         <div class="box_right" id="box">
             <h3>{{ randomNum }} was the number!</h3>
             <h2>You got it in {{ template_tries }}/5 Tries</h2>
-            <form action="/">
-                <button>Play again</button>
+            <form action="/leader/" method="POST">
+                <textarea name="name" id="name" cols="10" rows="1"></textarea>
+                <button>Join the Leaderboards!</button>
             </form>
         </div>
         {% endif%}
