@@ -41,6 +41,9 @@ def leaderboard():
     session['leaderboard'].append([session['name'],session['tries']])
     print(session)
     return render_template("/")
+    session['name'] = request.form["name"]
+    session['leaderboard'].append([session['name'],session['tries']])
+    return render_template("leaderboard.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
