@@ -10,12 +10,24 @@
     <h1>All Users</h1>
     <table>
         <th>
-            <td>ID</td>
-            <td>Full Name</td>
-            <td>Email</td>
-            <td>Created At</td>
+            <tr>
+                <td>ID</td>
+                <td>Full Name</td>
+                <td>Email</td>
+                <td>Created At</td>
+            </tr>
         </th>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user['id'] }}</td>
+                <td>{{ user['first_name'] }} {{ user['last_name'] }}</td>
+                <td>{{ user['email'] }}</td>
+                <td>{{ user['created_at'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
-    <a href="/new/">Add New User</a>
+    <a href="/new">Add New User</a>
 </body>
 </html>

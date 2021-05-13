@@ -29,14 +29,15 @@
         <h1>Add New User</h1>
         <a href="/">Home</a>
     </div>
-    <form action="POST">
+    <form action="/create" method="POST">
         <label for="firstname">First Name:</label>
-        <textarea name="firstname" id="first_name" cols="30" rows="1" placeholder="Jane"></textarea>
+        <input type="text" name="firstname" id="fname">
         <label for="lastname">Last Name:</label>
-        <textarea name="lastname" id="last_name" cols="30" rows="1" placeholder="Doe"></textarea>
+        <input type="text" name="lastname" id="lname">
         <label for="email">Email:</label>
-        <textarea name="email" id="email_address" cols="30" rows="1" placeholder="JaneDoe@gmail.com"></textarea>
+        <input type="text" name="email" id="email">
         <button>Create</button>
     </form>
+    <a href="/">Cancel</a>
 </body>
 </html>
