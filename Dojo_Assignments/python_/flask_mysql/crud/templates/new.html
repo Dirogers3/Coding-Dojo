@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
+        .header {
+            display:flex;
+            justify-content: space-between;
+        }
+        body {
+            width:700px;
+            margin:auto;
+        }
+        button {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Add New User</h1>
+        <a href="/">Home</a>
+    </div>
+    <form action="POST">
+        <label for="firstname">First Name:</label>
+        <textarea name="firstname" id="first_name" cols="30" rows="1" placeholder="Jane"></textarea>
+        <label for="lastname">Last Name:</label>
+        <textarea name="lastname" id="last_name" cols="30" rows="1" placeholder="Doe"></textarea>
+        <label for="email">Email:</label>
+        <textarea name="email" id="email_address" cols="30" rows="1" placeholder="JaneDoe@gmail.com"></textarea>
+        <button>Create</button>
+    </form>
+</body>
+</html>
