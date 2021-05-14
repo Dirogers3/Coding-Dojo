@@ -48,8 +48,8 @@ def update_user(id):
         'email' : request.form['email'],
         "id": id
     }
-    User.update(data)
-    return redirect(f"/user/{id}")
+    user_id = User.update(data)
+    return redirect(f"/user/{user_id}")
 
 @app.route("/user/<int:id>/delete")
 def delete(id):
