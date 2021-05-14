@@ -26,17 +26,17 @@
 </head>
 <body>
     <div class="header">
-        <h1>Edit User</h1>
+        <h1>Add New User</h1>
         <a href="/">Home</a>
     </div>
-    <form action="/user/{{user['id']}}/update" method="POST">
-        <label for="firstname">First Name:</label>
-        <input type="text" name="firstname" id="fname" value="{{ user['first_name'] }}">
-        <label for="lastname">Last Name:</label>
-        <input type="text" name="lastname" id="lname" value="{{ user['last_name'] }}">
+    <form action="/create" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="fname">
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="lname">
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value="{{ user['email'] }}">
-        <button>Update</button>
+        <input type="text" name="email" id="email">
+        <button>Create</button>
     </form>
     <a href="/">Cancel</a>
 </body>
