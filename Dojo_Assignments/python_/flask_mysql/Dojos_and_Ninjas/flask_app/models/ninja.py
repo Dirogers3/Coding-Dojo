@@ -15,5 +15,4 @@ class Ninja:
     def create(cls, data):
         query = "INSERT INTO ninjas (dojos_id, first_name, last_name, age, created_at, updated_at) VALUES (%(dojos_id)s, %(first_name)s, %(last_name)s, %(age)s, NOW(), NOW());"
         ninja_id = connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)
-        print("THIS IS NINJA ID ========>> ", ninja_id)
         return ninja_id

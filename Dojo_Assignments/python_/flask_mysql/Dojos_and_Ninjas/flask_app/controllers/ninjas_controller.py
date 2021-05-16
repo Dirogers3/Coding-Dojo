@@ -10,9 +10,5 @@ def newNinja():
 
 @app.route("/ninjas/create", methods=['POST'])
 def create_ninja():
-    # data = {
-    #     "dojos_id":request.form['dojo']
-    #     "first_name":request.form[first_name]
-    # }
     Ninja.create(request.form)
     return redirect(url_for(".display_dojo",dojos_id = request.form.get("dojos_id")))
