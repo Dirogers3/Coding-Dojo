@@ -7,8 +7,8 @@ def get_book():
     books = Book.get_all_books()
     return render_template("books.html", all_books = books)
 
-@app.route("/create_books/", methods=['POST'])
+@app.route("/add_book/", methods=['POST'])
 def add_book():
-    Book.insert_book(request.form)
-    return redirect("/")
+    Book.add_book(request.form)
+    return redirect("/books/")
 

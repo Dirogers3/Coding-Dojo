@@ -9,6 +9,5 @@ def index():
 
 @app.route("/add_author/", methods=['POST'])
 def add_author():
-
     Author.add_author(request.form)
     return redirect("/")
