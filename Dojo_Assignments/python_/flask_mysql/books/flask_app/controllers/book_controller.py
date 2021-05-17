@@ -12,3 +12,9 @@ def add_book():
     Book.add_book(request.form)
     return redirect("/books/")
 
+@app.route("/book/<int:book_id>")
+def show_book(book_id):
+    print("THIS IS THE BOOK ID FROM THE SHOW",book_id)
+    books_authors = Book.get_book_authors({"id": book_id})
+    return render_template("/books_show.html", authors = books_authors)
+
