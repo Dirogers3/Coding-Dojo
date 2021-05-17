@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors Show</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        select {
+             width: 120px;
+        }
+        button {
+            margin: 15px 80px 0px 0px;
+            float: right;
+        }
+        .favorites {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftcol">
+            <h1> {{}}'s Favorites</h1>
+            <table>
+                <th>
+                    <td>Title</td>
+                    <td># of pages</td>
+                </th>
+            </table>
+        </div>
+        <div class="rightcol">
+            <h1>Add Author's Favorites</h1>
+            <form action="/add/book/">
+                <div class="favorites">
+                    <label for="book">Book:</label>
+                    <select name="book" id="book">
+                        <!--this will house the loop that goes through all books-->
+                    </select>
+                </div>
+                <button>Add</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

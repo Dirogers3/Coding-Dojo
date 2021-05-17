@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .table {
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 15px 0px 0px 50px;
+        }
+        input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftcol">
+            <h1>New Author</h1>
+            <form action="/add_author/" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+                <br>
+                <button>Create</button>
+            </form>
+        </div>
+        <div class="rightcol">
+            <h1>All Authors</h1>
+            <div class="table">
+                <table> 
+                    {% for author in all_authors%}
+                    <div><a href="">{{author.name}}</a></div>
+                    {% endfor %}
+                </table>
+            </div>
+            <a href="/books/">Add Book</a>
+        </div>
+    </div>
+</body>
+</html>
