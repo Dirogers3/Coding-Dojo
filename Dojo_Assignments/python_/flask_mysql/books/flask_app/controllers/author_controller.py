@@ -17,13 +17,9 @@ def add_author():
 # This will display the author page and pass in author info
 @app.route("/authors/<int:author_id>")
 def show_author_page(author_id):
-    author = Author.one_author({'id':author_id})
-    books = Author.get_books_of_author({'id':author_id})
-    list_books = []
-    for book in books:
-        list_books.append(book)
-    print("THIS IS THE AUTHOR INFORMATION",author.books)
-    return render_template("/authors_show.html", author=author, books=books)
+    author = Author.get_books_of_author({'id':author_id})
+    books = Author.get_not_books_of_author({'id':author_id})
+    return render_template("/authors_show.html", author=author, books = books)
 
 @app.route("/add/book/", methods=['POST'])
 def add_book_to_author():

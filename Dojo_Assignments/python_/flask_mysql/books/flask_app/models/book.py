@@ -1,5 +1,5 @@
 from ..config.mysqlconnection import connectToMySQL
-from ..models.author import Author
+
 
 class Book:
     def __init__(self, data):
@@ -14,6 +14,7 @@ class Book:
 
     @classmethod 
     def get_books_authors(cls, data):
+        from ..models.author import Author
         query = "SELECT * FROM books JOIN favorites ON books.id = favorites.books_id JOIN authors ON favorites.authors_id = authors.id WHERE books.id = %(id)s;"
         results = connectToMySQL("books_schema").query_db(query, data)
         book = cls(results[0])

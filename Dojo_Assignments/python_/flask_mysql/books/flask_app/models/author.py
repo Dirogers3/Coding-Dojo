@@ -1,4 +1,5 @@
 from ..config.mysqlconnection import connectToMySQL
+from ..models.book import Book
 
 
 
@@ -26,7 +27,7 @@ class Author:
                 'created_at':row['books.created_at'],
                 'updated_at':row['books.updated_at']
             }
-            authors.books.append((data))
+            authors.books.append(Book(data))
         return authors
         
     @classmethod
@@ -40,6 +41,7 @@ class Author:
         query = "INSERT INTO favorites (authors_id, books_id, created_at, updated_at) VALUES (%(authors_id)s, %(books_id)s, NOW(), NOW());"
         favorites_id = connectToMySQL("books_schema").query_db(query, data)
         return favorites_id
+
 
 #CRUD
 #CREATE
