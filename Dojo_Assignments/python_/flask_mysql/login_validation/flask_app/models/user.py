@@ -39,7 +39,7 @@ class User:
         is_valid = True
 
         if len(post_data['first_name']) < 2:
-            flash("First Name must be more than 2 characters.")
+            flash(u"First Name must be more than 2 characters.", "first_name")
             is_valid = False
 
         if len(post_data['last_name']) < 2:
