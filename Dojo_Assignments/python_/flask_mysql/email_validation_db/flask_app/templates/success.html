@@ -8,15 +8,15 @@
     <title>Success Page</title>
 </head>
 <body>
-    <div class="container position-absolute top-50 start-50 translate-middle d-flex flex-column justify-conent-center align-items-center">
-        <div class="d-flex align-items-center flex-column container bg-success bg-gradient border border-dark border-3">
+    
+        <div >
             <h5>The email address you entered ({{email['email']}})</h5>  
             <h5>is a VALID email address! Thank You!</h5>
         </div>
         <div>
             <h1 style="text-decoration: underline;" class="mt-3">Email Addresses Entered:</h1>
                 {% for email in emails %}
-                <div style="width: 650px;" class="container d-flex justify-content-between mt-3 mb-3">
+                <div style="width: 650px;">
                     <h5>{{email['email']}}</h5> 
                     <h5>{{email['created_at']}}</h5>
                     <a href="/delete/{{email['id']}}">Delete</a>
@@ -24,6 +24,5 @@
                 {% endfor %}
         </div>
         <a href="/">Go Back</a>
-    </div>
 </body>
 </html>
