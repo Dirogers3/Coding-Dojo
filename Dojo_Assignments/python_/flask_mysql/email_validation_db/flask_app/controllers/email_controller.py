@@ -2,14 +2,37 @@ from ..models.email import Email
 from flask_app import app
 from flask import render_template,redirect,request,session,flash
 from flask_app.config.mysqlconnection import connectToMySQL
+import re
+EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
-@app.route("/")
+@app.route('/')
 def index():
-    print("IS THIS EVEN RUNNING?")
     return render_template("index.html")
 
-@app.route("/register/", methods=["POST"])
-def register():
-    if not Email.check_email(request.form):
+@app.route('/create', methods=['POST'])
+def create():
+    if not EMAIL_REGEX.match(request.form['email']):
+        flash("INVALID EMAIL ADDRESS")
         return redirect('/')
-    return redirect('/success.html')
+    for e in Email.show_all():
+        if request.form['email'] == e['email']:
+            flash("EMAIL ADDRESS ALREADY IN USE")
+            return redirect('/')
+
+    email = Email.submit(request.form)
+    return redirect(f'/success/{email}')
+
+@app.route('/success/<emailid>')
+def success(emailid):
+    data = {
+        'emailid': emailid
+    }
+    return render_template("success.html",email=Email.show(data), emails=Email.show_all())
+
+@app.route('/delete/<emailid>')
+def delete(emailid):
+    data = {
+        'emailid': emailid
+    }
+    Email.delete(data)
+    return redirect('/')
