@@ -2,19 +2,25 @@ from flask import render_template, redirect, request, session, flash
 from flask_app import app
 from ..models.book import Book
 
-@app.route("/books/")
-def get_book():
-    books = Book.get_all_books()
-    return render_template("books.html", all_books = books)
-
 @app.route("/add_book/", methods=['POST'])
 def add_book():
-    Book.add_book(request.form)
+    Book.insert_book(request.form)
     return redirect("/books/")
 
-@app.route("/book/<int:book_id>")
+@app.route("/books/")
+def new_book_form():
+    books = Book.all_books()
+    return render_template("books.html", books = books)
+
+@app.route("/books/<int:book_id>")
 def show_book(book_id):
-    print("THIS IS THE BOOK ID FROM THE SHOW",book_id)
-    books_authors = Book.get_book_authors({"id": book_id})
-    return render_template("/books_show.html", authors = books_authors)
+    book = Book.get_books_authors({'id':book_id})
+    not_fav_authors = Book.get_not_book_authors({'id':book_id})
+    return render_template("/books_show.html", book = book, not_authors= not_fav_authors)
+
+@app.route("/add/book/favorite/", methods=['POST'])
+def add_favorite():
+    book_id = request.form['book_id']
+    Book.add_author_to_favorites(request.form)
+    return redirect(f"/books/{book_id}")
 

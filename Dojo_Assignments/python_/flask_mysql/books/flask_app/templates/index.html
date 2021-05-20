@@ -39,8 +39,8 @@
             <h1>All Authors</h1>
             <div class="table">
                 <table> 
-                    {% for author in all_authors%}
-                    <div><a href="">{{author.name}}</a></div>
+                    {% for author in authors%}
+                    <div><a href="/authors/{{author.id}}">{{author.name}}</a></div>
                     {% endfor %}
                 </table>
             </div>

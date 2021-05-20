@@ -26,24 +26,30 @@
 <body>
     <div class="container">
         <div class="leftcol">
-            <h1>Title: {{book.title}}</h1>
+            <h1>Title: {{ book.title }}</h1>
             <h3>Favorited by:</h3>
             <table>
-                <tr>
-                    <td>Database stuff will go here</td>
-                </tr>
+                    {% for author in book.authors %}
+                    <tr>
+                        <td>{{author.name}}</td>
+                    </tr>
+                    {% endfor %}
             </table>
         </div>
         <div class="rightcol">
             <h1>Add Book's Favorites</h1>
             <div class="favorite">
-                <form action="/add/book/favorite/">
+                <form action="/add/book/favorite/" method="POST">
                     <div class="author_selector">
                         <label for="author">Author:</label>
-                        <select name="author" id="author">
-                            <option value=""></option>
+                        <select name="authors_id" id="author">
+                            {% for author in not_authors %}
+                            <option value="{{author.id}}">{{author.name}}</option>
+                            {% endfor %}
                         </select>
+                        
                     </div>
+                    <input type="hidden" name="book_id" value ="{{ book.id }}">
                     <button>Add</button>
                 </form>
             </div>
