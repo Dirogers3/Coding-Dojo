@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .header a {
+            margin: 20px 20px 0px 0px;
+        }
+        .label {
+            display:flex;
+            width: 400px;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: flex-start; 
+        }
+
+        .label input {
+            width: 260px;
+            height: 20px;
+        }
+        .radio {
+            display:flex;
+            align-items: center;
+        }
+        .radio p {
+            width:140px;
+        }
+        button {
+            margin-left: 145px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <h1>Add New Recipe</h1>
+    <div class="container">
+            <form action="/create_recipe">
+                <div class="label">
+                    <p>Name:</p>
+                    <input type="number" name="name" id="name">
+                </div>
+                <div class="label">
+                    <p>Description:</p>
+                    <textarea name="description" id="description" cols="30" rows="4"></textarea>
+                </div>
+                <div class="label">
+                    <p>Instructions:</p>
+                    <textarea name="instruction" id="instruction" cols="30" rows="6"></textarea>
+                </div>
+                <div class="radio">
+                    <p>Under 30 minutes to prepare?</p>
+                    <input type="radio" id="yes" name="prep_time" value="Yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="prep_time" value="No">
+                    <label for="no">No</label>
+                </div>
+                <button>Create</button>
+            </form>
+    </div>
+</body>
+</html>

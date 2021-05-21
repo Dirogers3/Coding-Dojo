@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .header a {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/new_recipe.html">Create</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="container">
+        <h1>Welcome {{user.name}}!</h1>
+        <p>These are your recipes</p>
+        <table>
+            <th>
+                <tr>
+                    <td>Name</td>
+                    <td>Under 30 minutes?</td>
+                    <td>Actions</td>
+                </tr>
+            </th>
+            {% for recipe in recipes %}
+                <tr>
+                    <td>recipe.name</td>
+                    <td>recipe.time</td>
+                    <td>
+                        <a href="/view">view instructions</a>
+                        <a href="/edit">edit</a>
+                        <a href="/delete">delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

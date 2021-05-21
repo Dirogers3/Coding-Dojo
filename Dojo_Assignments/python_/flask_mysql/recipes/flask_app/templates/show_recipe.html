@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container {
+            display: flex;
+            border: 2px solid black;
+            padding:10px;
+        }
+        .leftcol {
+            width: 130px;
+        }
+        .rightcol {
+            width: 380px;
+        }
+        p {
+            word-break: break-all;
+            white-space: normal;
+        }
+        
+
+    </style>
+<body>
+    <h1>{{recipe.name}}</h1>
+    <div class="container">
+        <div class="leftcol">
+            <p>Description</p>
+            <p>Under 30 minutes?</p>
+            <p>Instructions</p>
+        </div>
+        <div class="rightcol">
+            <p>{{ recipe.decription }}</p>
+            <p>{{ recipe.prep_time }}</p>
+            <p>{{ recipe.instruction }}</p>
+        </div>
+    </div>
+</body>
+</html>
