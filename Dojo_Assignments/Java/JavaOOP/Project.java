@@ -3,9 +3,7 @@ public class Project {
     private String description;
     private Double initialCost;
 
-    public String elevatorPitch(){
-        return name +"("+initialCost+")"+":"+ description;
-    }
+    //CONSTRUCTERS
     public Project(){
 
     }
@@ -24,6 +22,12 @@ public class Project {
          this.name = name;
          this.description = description;
      }
+
+     public String elevatorPitch() {
+         return name + "(" + initialCost + ")" + ":" + description;
+     }
+
+
      
      public String getName(){
          return name;
@@ -49,6 +53,7 @@ public class Project {
          return initialCost;
      }
 
+     
 }
     
 

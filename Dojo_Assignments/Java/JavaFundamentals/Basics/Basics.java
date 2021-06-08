@@ -45,13 +45,13 @@ public class Basics {
         mMA(x6);
 
         int[] x7 = {1, 5, 10, 7, -2};
-        shifting(x7);
+        shifting(x6);
 
         }
 
         // Find Max
         static void findMax(int[] x1) {
-            int max = 0;
+            int max =0;
             for (int i = 0; i < x1.length; i++) {
                 if (x1[i]> max) {
                     max = x1[i];
@@ -134,12 +134,12 @@ public class Basics {
         }
 
         // Shifting the values in an Array
-        static void shifting(int[] x7) {
-            for (int i = 0; i < x7.length-1; i++) {
-                x7[i] = x7[i+1];
+        static void shifting(int[] arr) {
+            for (int i = 0; i < arr.length-1; i++) {
+                arr[i] = arr[i+1];
             }
-            x7[x7.length - 1] = 0;
-            System.out.println(Arrays.toString(x7));
+            arr[arr.length - 1] = 0;
+            System.out.println(Arrays.toString(arr));
         }
 
 
