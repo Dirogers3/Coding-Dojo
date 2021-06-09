@@ -8,12 +8,5 @@ public class GorillaTest {
         g.eatBananas();
         g.eatBananas();
         g.displayEnergy();
-        Bat b = new Bat();
-        b.AttackTown();
-        b.AttackTown();
-        b.AttackTown();
-        b.eatHumans();
-        b.eatHumans();
-        b.displayEnergy();
     }
 }

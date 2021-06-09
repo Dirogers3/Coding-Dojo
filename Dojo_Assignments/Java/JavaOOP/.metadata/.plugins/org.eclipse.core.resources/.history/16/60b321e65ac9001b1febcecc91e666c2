@@ -1,4 +1,5 @@
 public class Gorilla extends Mammal{
+    Mammal m = new Mammal();
     public void throwSomething(){
         System.out.println("Threw Something");
         minusEnergy(5);

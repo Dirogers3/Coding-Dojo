@@ -1,5 +1,5 @@
 public class Mammal {
-    private int energylevel = 300;
+    private int energylevel = 0;
 
     
     public void addEnergy(int x){

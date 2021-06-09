@@ -14,6 +14,5 @@ public class GorillaTest {
         b.AttackTown();
         b.eatHumans();
         b.eatHumans();
-        b.displayEnergy();
     }
 }

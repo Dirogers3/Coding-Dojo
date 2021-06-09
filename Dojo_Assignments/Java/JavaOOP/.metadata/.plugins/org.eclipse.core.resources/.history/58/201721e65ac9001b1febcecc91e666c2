@@ -1,0 +1,18 @@
+
+public class Bat extends Mammal {
+Mammal m = new Mammal();
+
+
+public void fly() {
+	m.minusEnergy(50);
+	System.out.println("FLAP FLAP FLAP");
+}
+
+public void eatHumans() {
+	m.addEnergy(25);
+}
+
+public void AttackTown() {
+	m.minusEnergy(100);
+}
+}
