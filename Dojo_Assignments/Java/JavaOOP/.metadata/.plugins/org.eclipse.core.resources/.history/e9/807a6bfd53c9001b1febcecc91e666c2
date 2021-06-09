@@ -1,0 +1,17 @@
+public class Zookeeper {
+    private int energylevel = 0;
+
+    
+    public void addEnergy(int x){
+        energylevel = energylevel + x;
+    }
+
+    public void minusEnergy(int x) {
+        energylevel = energylevel - x;
+    }
+
+    public Integer displayEnergy(){
+        System.out.println(energylevel);
+        return energylevel;
+    }
+}
