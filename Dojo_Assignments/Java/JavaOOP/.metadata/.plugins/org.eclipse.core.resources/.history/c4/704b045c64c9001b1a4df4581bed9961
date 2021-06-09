@@ -1,15 +1,10 @@
 
 public class Human {
 
-	public int strength, stealth, intelligence, health;
-	
-	public Human() {
-		strength = 3;
-		stealth = 3;
-		intelligence = 3;
-		health = 100;
-	}
-	
+	private int strength = 3;
+	private int stealth = 3;
+	private int intelligence = 3;
+	private int health = 100;
 	
 	public void attack(Human x) {
 		x.health = x.health - strength;
