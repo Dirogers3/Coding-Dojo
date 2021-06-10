@@ -13,9 +13,8 @@ public class IPhone extends Phone implements Ringable{
     	return "Unlocking via facial recognition";
     }
     @Override
-    public void displayInfo() {
-        // your code here  
+    public void displayInfo() { 
         System.out.println("iPhone " + getVersionNumber() + " from " + getCarrier());
-
     }
+	
 }

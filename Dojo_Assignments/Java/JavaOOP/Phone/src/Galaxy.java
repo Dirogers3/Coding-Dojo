@@ -18,4 +18,5 @@ public class Galaxy extends Phone implements Ringable{
         System.out.println("Galaxy " + getVersionNumber() + " from " + getCarrier());
 
     }
+
 }
