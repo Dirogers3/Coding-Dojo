@@ -1079,3 +1079,114 @@ Binding(COMMAND+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:28:16.850
 !MESSAGE executing callback sts4.classpath.ZTavuDRF SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:29:00.811
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:29:00.812
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:29:00.812
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF BankAccount false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:29:00.812
+!MESSAGE executing callback sts4.classpath.ZTavuDRF 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:29:00.819
+!MESSAGE executing callback sts4.classpath.ZTavuDRF SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:30:16.699
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:30:16.699
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:30:16.700
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF BankAccount false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:30:16.700
+!MESSAGE executing callback sts4.classpath.ZTavuDRF 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:30:16.716
+!MESSAGE executing callback sts4.classpath.ZTavuDRF SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.812
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.813
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.813
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF Human false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.814
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.814
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.815
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF ObjectMaster false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.815
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.816
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.816
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF Zookeeper false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.816
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.817
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.817
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF test false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.818
+!MESSAGE executing callback sts4.classpath.ZTavuDRF 4 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:34:55.974
+!MESSAGE executing callback sts4.classpath.ZTavuDRF SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:35:06.192
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:35:06.193
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:35:06.194
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF BankAccount false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:35:06.194
+!MESSAGE executing callback sts4.classpath.ZTavuDRF 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:35:06.199
+!MESSAGE executing callback sts4.classpath.ZTavuDRF SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:36:55.293
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:36:55.294
+!MESSAGE buffering callback sts4.classpath.ZTavuDRF test true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:36:55.294
+!MESSAGE executing callback sts4.classpath.ZTavuDRF 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 11:36:55.297
+!MESSAGE executing callback sts4.classpath.ZTavuDRF SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 13:11:59.027
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZTavuDRF
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 13:11:59.028
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZTavuDRF
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 13:11:59.028
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-11 13:11:59.028
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZTavuDRF => OK
