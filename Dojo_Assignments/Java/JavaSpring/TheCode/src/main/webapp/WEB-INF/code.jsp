@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome, Again</title>
+<title>The Bushido Code</title>
 </head>
 <body>
-<h1>Welcome User!</h1>
+	<ul>
+		<li>Loyalty</li>
+		<li>Courage</li>
+		<li>Veracity</li>
+		<li>Compassion</li>
+		<li>Honor</li>
+	</ul>
 </body>
 </html>
