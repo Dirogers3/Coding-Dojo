@@ -1,10 +1,8 @@
   
 function pageInfo() {
-	alert("This is the data template")
+	alert("This is the date template")
 }
 
 function pageInfoTime() {
 	alert("This is the time template")
 }
-
-console.log("this is working");
