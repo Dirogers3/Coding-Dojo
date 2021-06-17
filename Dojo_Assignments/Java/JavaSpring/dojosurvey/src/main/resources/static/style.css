@@ -1,0 +1,21 @@
+@charset "UTF-8";
+	.container {
+	border: 2px solid black;
+	width: 400px;
+	display: inline-flex;
+	justify-content: space-around;
+	margin:auto;
+	padding: 10px;
+	}
+	.leftcol {
+	display:flex;
+	flex-direction: column;
+	}
+	.rightcol {
+	display:flex;
+	flex-direction: column;
+	margin-left: 20px;
+	}
+	.container-main {
+	display: flex;
+	}
