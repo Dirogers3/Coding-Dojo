@@ -1,2 +1,2 @@
-this.tail.next = newNode;
-                this.tail = newNode
+testTree.insert(20);
+testTree.insert(15);
