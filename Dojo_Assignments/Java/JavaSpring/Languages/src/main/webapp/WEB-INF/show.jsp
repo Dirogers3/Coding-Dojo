@@ -18,6 +18,7 @@
 		<p>Version: <c:out value="${language.version}"/></p>
 
 	<a href="/languages/${language.id}/edit">edit</a>
+	<a href="/"></a>
 	<form action="/languages/${language.id}" method="post">
 	    <input type="hidden" name="_method" value="delete">
 		<input type="submit" value="Delete">

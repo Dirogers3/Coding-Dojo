@@ -1,0 +1,13 @@
+package com.ianrogers.counter1;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Conter1ApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
