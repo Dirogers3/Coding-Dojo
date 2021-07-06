@@ -22,8 +22,17 @@ class Ninja {
     }
 }
 
-const ninja = new Ninja("Bob", 3);
-ninja.sayName();
-ninja.showStats();
-ninja.drinkSake();
-ninja.showStats();
+class Sensei extends Ninja {
+    constructor(name, health, speed, strength, wisdom = 10) {
+        super(name, health, speed, strength);
+    }
+    speakWisdom(){
+        super.drinkSake();
+        console.log("What one programmer can do in one month, two programmers can do in two months.");
+    }
+}
+
+const superSensei = new Sensei("Master Splinter", 200, 10, 10);
+superSensei.speakWisdom();
+superSensei.showStats();
+
