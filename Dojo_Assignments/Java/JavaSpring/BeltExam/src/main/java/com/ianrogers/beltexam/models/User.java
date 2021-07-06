@@ -1,14 +1,20 @@
 package com.ianrogers.beltexam.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+
+
     
 @Entity
 @Table(name="users")
@@ -18,9 +24,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @NotEmpty(message="Username is required!")
-    @Size(min=3, max=30, message="Username must be between 3 and 30 characters")
-    private String userName;
+    @NotEmpty(message="Name is required!")
+    @Size(min=2, max=30, message="Nameame must be between 2 and 30 characters")
+    private String name;
     
     @NotEmpty(message="Email is required!")
     @Email(message="Please enter a valid email!")
@@ -34,7 +40,10 @@ public class User {
     @NotEmpty(message="Confirm Password is required!")
     @Size(min=8, max=128, message="Confirm Password must be between 8 and 128 characters")
     private String confirm;
-  
+    
+    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+    private List<Task> tasks;
+    
     public User() {}
 
 	public Long getId() {
@@ -45,12 +54,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getname() {
+		return name;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setname(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {
@@ -76,4 +85,15 @@ public class User {
 	public void setConfirm(String confirm) {
 		this.confirm = confirm;
 	}
+
+	public List<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(List<Task> tasks) {
+		this.tasks = tasks;
+	}
+
+    
+	
 }

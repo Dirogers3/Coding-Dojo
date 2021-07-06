@@ -6,16 +6,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Task Manager</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<title>Cafe Java</title>
 </head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+	body {
+		display:flex;
+		justify-content: space-around;
+		padding: 30px;
+	}
+</style>
 <body>
     
     <form:form action="/register" method="post" modelAttribute="newUser">
+    <h2>Register</h2>
         <div class="form-group">
-            <label>User Name:</label>
-            <form:input path="userName" class="form-control" />
-            <form:errors path="userName" class="text-danger" />
+            <label>Name:</label>
+            <form:input path="name" class="form-control" />
+            <form:errors path="name" class="text-danger" />
         </div>
         <div class="form-group">
             <label>Email:</label>
@@ -36,6 +44,7 @@
     </form:form>
     
     <form:form action="/login" method="post" modelAttribute="newLogin">
+    <h2>Login</h2>
         <div class="form-group">
             <label>Email:</label>
             <form:input path="email" class="form-control" />
@@ -46,7 +55,7 @@
             <form:password path="password" class="form-control" />
             <form:errors path="password" class="text-danger" />
         </div>
-        <input type="submit" value="Login" class="btn btn-success" />
+        <input  type="submit" value="Login" class="btn btn-success" />
     </form:form>
     
 </body>
